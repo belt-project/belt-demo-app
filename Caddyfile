@@ -1,0 +1,3 @@
+belt-demo.tomb.io {
+  proxy / localhost:1234
+}

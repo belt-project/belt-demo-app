@@ -1,0 +1,16 @@
+[Unit]
+Description=belt-demo
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+User=belt-demo
+Group=belt-demo
+EnvironmentFile=/app/belt-demo/.env
+Restart=always
+RestartSec=5s
+ExecStart=/app/belt-demo/belt-demo-app
+
+[Install]
+WantedBy=multi-user.target
