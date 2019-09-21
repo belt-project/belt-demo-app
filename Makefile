@@ -1,7 +1,10 @@
 build:
+	go build .
+
+linux:
 	GOOS=linux go build .
 
-archive: build
+archive: linux
 	tar zcvf belt-demo.tar.gz belt-demo-app belt-demo.service Caddyfile .env
 
-.PHONY: build archive
+.PHONY: build linux archive
