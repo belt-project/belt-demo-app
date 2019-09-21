@@ -68,7 +68,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/favicon.ico", http.NotFound)
 
 	log.Println("Starting server...")
+	log.Println("http://localhost:1234")
 	log.Fatalln(http.ListenAndServe(":1234", nil))
 }
