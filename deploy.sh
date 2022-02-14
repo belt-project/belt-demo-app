@@ -50,7 +50,7 @@ deploy_app() {
   echo "OK"
 }
 
-belt_begin_session "root" "belt-demo.tomb.io"
+belt_begin_session "root" "demo.belt.sh"
 
 install_caddy
 deploy_app
